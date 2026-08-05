@@ -1,0 +1,64 @@
+/* Global Styles */
+:root {
+    --cream-bg: #fdfbf5;
+    --dark-green: #2b5329;
+    --text-dark: #1e1e1e;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body, html {
+    margin: 0; padding: 0;
+    background-color: var(--cream-bg);
+    color: var(--text-dark);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+}
+
+a { text-decoration: none; color: var(--text-dark); }
+a:hover { color: var(--dark-green); }
+
+/* Navigation */
+nav { display: flex; justify-content: center; padding: 2rem; }
+nav ul { list-style: none; display: flex; gap: 2rem; margin: 0; padding: 0; }
+
+/* Page Containers */
+.container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
+.page-title { margin-bottom: 3rem; font-size: 2.5rem; }
+
+/* Split Sections (Home & About) */
+.split-section { display: flex; gap: 4rem; margin-bottom: 4rem; }
+.split-section.reverse { flex-direction: row-reverse; }
+.split-left { flex: 1; }
+.split-right { flex: 2; font-size: 1.1rem; }
+.split-left img { width: 100%; height: auto; display: block; }
+
+/* Blog/Achievements Layout */
+.post-card { display: flex; gap: 2rem; margin-bottom: 3rem; border-bottom: 1px solid #eae5d9; padding-bottom: 2rem; }
+.post-img { width: 300px; height: 200px; object-fit: cover; }
+.post-content h3 { margin-top: 0; font-size: 1.8rem; margin-bottom: 0.5rem; }
+.post-meta { font-size: 0.85rem; color: #666; margin-bottom: 1rem; }
+
+/* Gallery Layout */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.gallery-item img { width: 100%; height: 250px; object-fit: cover; }
+.gallery-caption { text-align: center; margin-top: 1rem; font-weight: bold; }
+
+/* Footer */
+footer { background-color: var(--cream-bg); padding: 4rem 2rem; border-top: 1px solid #eae5d9; }
+.footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr 1fr 2fr; gap: 2rem; font-size: 0.9rem; align-items: center;}
+.footer-logo { width: 120px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .split-section, .split-section.reverse { flex-direction: column; }
+    .post-card { flex-direction: column; }
+    .post-img { width: 100%; }
+    .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    nav ul { flex-direction: column; align-items: center; }
+}
