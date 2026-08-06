@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidya Grace Foundation</title>
+    <!-- Import Playfair Display (Serif) and Montserrat (Clean Sans-Serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --cream-bg: #FCFAF5; /* Exact warm cream from screenshot */
+            --text-dark: #333333;
+            --text-green: #203A2B; /* Dark olive for headings */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--cream-bg);
+            color: var(--text-dark);
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 2.5rem 0;
+            background-color: var(--cream-bg);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555555;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+            padding-bottom: 3px;
+        }
+
+        nav a.active {
+            color: #333;
+            border-bottom: 1px solid #333; /* The active underline from the screenshot */
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            height: 75vh;
+            min-height: 500px;
+            background-image: url('classroom-meeting.jpg'); /* Replace with your field image name */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35); /* Subtle dark overlay */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* The Square Wix Logo */
+        .hero-logo {
+            width: 170px;
+            height: 170px;
+            background-color: #f7f6f1; /* Off-white square background */
+            object-fit: contain;
+            margin-bottom: 2rem;
+            padding: 10px; /* Gives it the padded square look */
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 2.7rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #e8e8e8;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 10px 32px;
+            border: 1px solid #ffffff;
+            border-radius: 30px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* --- Mission Section --- */
+        .mission-section {
+            max-width: 1100px;
+            margin: 6rem auto;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr; /* Matches the Wix column ratio */
+            gap: 4rem;
+        }
+
+        .mission-title {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: var(--text-green); /* Dark green from screenshot */
+        }
+
+        .mission-text p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Bold the first paragraph just like the screenshot */
+        .mission-text p:first-child {
+            font-weight: 600;
+            color: #222222;
+        }
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 800px) {
+            .mission-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin: 4rem auto;
+            }
+            .hero h1 { font-size: 2rem; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="achievements.html">Student Achievements</a></li>
+            <li><a href="gallery.html">Village Highlights</a></li>
+            <li><a href="#">Get Involved</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Ensure your logo file is named logo.jpg -->
+            <img src="logo.jpg" alt="Vidya Grace Foundation Logo" class="hero-logo">
+            <h1>Empowering Education and Sports in Darapur, Moga, Punjab</h1>
+            <p>supporting students through scholarships, recognition, and community upliftment.</p>
+            <a href="about.html" class="btn-outline">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div>
+            <h2 class="mission-title">Our Mission</h2>
+        </div>
+        <div class="mission-text">
+            <p>Vidya Grace Foundation exists to empower the students of Darapur (Moga) Punjab through education, sports, recognition, and opportunity.</p>
+            
+            <p>We are committed to supporting academic excellence by providing scholarships, celebrating student achievements, and fostering a culture that values learning, integrity, and community growth.</p>
+            
+            <p>Through transparent and community-centered initiatives, we aim to remove barriers to education and create pathways for every child in Darapur to realize their full potential.</p>
+        </div>
+    </section>
+
+</body>
+</html>
