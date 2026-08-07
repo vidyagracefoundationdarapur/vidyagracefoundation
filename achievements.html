@@ -2,39 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Achievements | Vidya Grace Foundation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Achievements | Vidya Grace Foundation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <!-- Same Nav as above -->
-    </nav>
+    <header class="navbar" id="site-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <img src="logo.png" alt="Vidya Grace Foundation logo" class="brand-logo">
+                <span class="brand-text">VIDYA GRACE<small>FOUNDATION &middot; DARAPUR</small></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="achievements.html" class="active">Student Achievements</a></li>
+                <li><a href="gallery.html">Village Highlights</a></li>
+            </ul>
+            <a href="about.html#support" class="btn-pill btn-pill-dark">Support Us</a>
+        </div>
+    </header>
 
     <div class="container">
-        <h1 class="page-title">Student Achievements</h1>
-        
-        <div class="post-card">
-            <img src="post1.jpg" alt="Students in class" class="post-img">
+        <h1 class="page-title reveal">Student Achievements</h1>
+
+        <div class="post-card reveal">
+            <div class="img-placeholder">
+                <div class="ph-inner">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>
+                    <span>Add photo &mdash; students in class</span>
+                </div>
+            </div>
             <div class="post-content">
-                <div class="post-meta">vidyagracefoundation • Feb 19 • 4 min read</div>
+                <div class="post-meta">Vidya Grace Foundation &middot; Feb 19 &middot; 4 min read</div>
                 <h3>Empowering Education: Vidya Grace Foundation's Impact</h3>
-                <p>Education is a powerful tool that can transform lives and communities. The Vidya Grace Foundation stands as a beacon of hope, dedicated to providing quality education to...</p>
+                <p>Education is a powerful tool that can transform lives and communities. The Vidya Grace Foundation stands as a beacon of hope, dedicated to providing quality education to the students of Darapur...</p>
             </div>
         </div>
 
-        <div class="post-card">
-            <img src="post2.jpg" alt="Student success" class="post-img">
+        <div class="post-card reveal">
+            <div class="img-placeholder">
+                <div class="ph-inner">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>
+                    <span>Add photo &mdash; student success story</span>
+                </div>
+            </div>
             <div class="post-content">
-                <div class="post-meta">vidyagracefoundation • Feb 19 • 4 min read</div>
+                <div class="post-meta">Vidya Grace Foundation &middot; Feb 19 &middot; 4 min read</div>
                 <h3>Success Stories: Transforming Lives Through Education</h3>
                 <p>Education is often hailed as the great equalizer, a powerful tool that can change lives and uplift communities. It opens doors to opportunities, fosters personal growth, and...</p>
             </div>
         </div>
     </div>
 
-    <footer>
-        <!-- Same Footer as above -->
+    <footer id="support">
+        <div class="footer-container">
+            <div><img src="logo.png" alt="Logo" class="footer-logo"></div>
+            <div class="footer-col"><p><a href="mailto:vidyagracefoundation@outlook.com">vidyagracefoundation@outlook.com</a><br>Darapur, Moga, Punjab, India</p></div>
+            <div class="footer-col"><p><a href="#">Privacy Policy</a><br><a href="#">Accessibility</a></p></div>
+            <div class="footer-col"><p>&copy; 2026 Vidya Grace Foundation.</p></div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
